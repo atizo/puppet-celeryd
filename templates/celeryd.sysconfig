@@ -1,0 +1,13 @@
+VIRTUALENV="<%= virtualenv %>"
+PYHONPATH="<%= pythonpath %>"
+
+# 5 minute hard time limit for tasks + enable events at startup.
+CELERYD_OPTS="--time-limit=900 -E --beat -s /tmp/celerybeat-schedule"
+
+CELERYD_NODES="w1"
+CELERYD="<%= celeryd %>"
+CELERYD_LOG_FILE=<%= celeryd_log_file %>
+CELERYD_PID_FILE=/var/run/celeryd/celeryd.pid
+
+CELERYD_USER="<%= user %>"
+CELERYD_GROUP="<%= group %>"
