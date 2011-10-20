@@ -15,8 +15,8 @@ class celeryd(
   $celeryd,
   $celeryd_log_file,
   $pythonpath = '',
-  $user => nobody,
-  $group = nobody
+  $user = 'nobody',
+  $group = 'nobody'
 ) {
   file{'/etc/sysconfig/celeryd':
     content => template('modules/celeryd/celeryd.sysconfig'),
