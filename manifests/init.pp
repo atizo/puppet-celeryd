@@ -19,7 +19,7 @@ class celeryd(
   $group = 'nobody'
 ) {
   file{'/etc/sysconfig/celeryd':
-    content => template('modules/celeryd/celeryd.sysconfig'),
+    content => template('celeryd/celeryd.sysconfig'),
     notify => Service['celeryd'],
     owner => root, group => root, mode => 0444;
   }
