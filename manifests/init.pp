@@ -14,7 +14,7 @@ class celeryd(
   $virtualenv,
   $celeryd,
   $celeryd_log_file,
-  $time_limt => 900,
+  $time_limt = 900,
   $pythonpath = '',
   $user = 'nobody',
   $group = 'nobody'
